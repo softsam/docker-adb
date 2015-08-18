@@ -18,6 +18,6 @@ RUN mkdir -m 0750 /.android
 ADD files/insecure_shared_adbkey /.android/adbkey
 ADD files/insecure_shared_adbkey.pub /.android/adbkey.pub
 
-RUN wget -qO- "http://dl.google.com/android/android-sdk_r24.3.3-linux.tgz" | tar -zx -C /opt && \
+RUN wget -qO- "http://dl.google.com/android/android-sdk_r24.3.4-linux.tgz" | tar -zx -C /opt && \
     echo y | android update sdk --no-ui --all --filter platform-tools --force
 
